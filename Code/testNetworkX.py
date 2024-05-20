@@ -1,5 +1,3 @@
-import os.path
-
 import networkx as nx
 import matplotlib.pyplot as plt
 import tkinter as tk
@@ -23,10 +21,7 @@ class Grafo:
             nombre = simpledialog.askstring("Nombre", "Ingrese el nombre del archivo: ")
             filename = nombre + ".png"
             nx.draw(self.G, with_labels=True, font_weight='bold')
-            if os.path.exists("Grafos"):
-                os.makedirs("Grafos")
-            ruta = os.path.join("Grafos", filename)
-            plt.savefig(ruta)
+            plt.savefig(filename)
             plt.close()  # Aqui cierro el plot luego de guardar la imagen para que la imagen se muestre correctamente
         else:
             pass
