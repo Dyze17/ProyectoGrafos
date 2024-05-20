@@ -147,6 +147,7 @@ def update_elements(node_clicks, edge_clicks, tap_node, undo_clicks, elements, n
     return elements
 
 
+# Se limpian los inputs de los modales
 @app.callback(
     [Output("node-id-input", "value"),
      Output("node-label-input", "value"),
