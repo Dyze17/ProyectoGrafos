@@ -147,6 +147,24 @@ def update_elements(node_clicks, edge_clicks, tap_node, undo_clicks, elements, n
     return elements
 
 
+@app.callback(
+    [Output("node-id-input", "value"),
+     Output("node-label-input", "value"),
+     Output("edge-source-input", "value"),
+     Output("edge-target-input", "value"),
+     Output("filename-input", "value")],
+    [Input("add-node-button", "n_clicks"),
+     Input("add-edge-button", "n_clicks"),
+     Input("save-graphml-button", "n_clicks")]
+)
+def clear_inputs(add_node_clicks, add_edge_clicks, save_clicks):
+    ctx = callback_context
+    if not ctx.triggered:
+        return ["", "", "", "", ""]
+
+    return ["", "", "", "", ""]
+
+
 # Se crea un grafo de networkx a partir de los elementos del grafo en la aplicacion web
 @app.callback(
     Output("save-graphml-button", "n_clicks"),

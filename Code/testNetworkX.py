@@ -41,6 +41,7 @@ class Grafo:
             pass
 
 
+# Aqui se crea una instancia de la clase Grafo y se llama a los metodos cargar y dibujar
 if __name__ == '__main__':
     g = Grafo()
     if g.cargar():
